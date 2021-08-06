@@ -126,8 +126,9 @@ INSERT INTO guest VALUES (4, 123456, "Jack", "Wazowski", "6863849685", "thewazze
 INSERT INTO guest VALUES (5, 123456, "Diane", "Wazowski", "6863849685", "thewazzes@outlook.com");
 
 INSERT INTO staff VALUES (1, "default", "user", "1231231231", "defuser@default.com", "default", 1);
-INSERT INTO staff VALUES (2, "Geoffry", "Butler", "5438761029", "gbutler@gmail.com", "freshPrince", 1);
-INSERT INTO staff VALUES (3, "So", "Blue", "0000000000", "dabodee@gmail.com", "dabodaa", 1);
+INSERT INTO staff VALUES (2, "Geoffry", "Butler", "5438761029", "gbutler@gmail.com", "freshPrince", 0);
+INSERT INTO staff VALUES (3, "So", "Blue", "0000000000", "dabodee@gmail.com", "dabodaa", 0);
+INSERT INTO staff VALUES (4, "Kristen", "Applebees", "5678675309", "kapple@aol.com", "praisethesun", 1);
 
 INSERT INTO event VALUES (1, "Test Event", "Zoom", "2020-07-17", "04:30:00");
 INSERT INTO event VALUES (2, "Homecoming", "Home", "2021-10-25", "09:00:00");

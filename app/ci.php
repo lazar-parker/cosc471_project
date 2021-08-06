@@ -20,7 +20,7 @@ if(isset($_POST["fname"]) && isset($_POST["lname"]) && isset($_POST["sid"])) {
       $guest = 0;
     }
     $sql = 'SELECT * FROM student WHERE student_id=' . $sid . ' AND f_name="' . $fname . '" AND l_name="' . $lname . '";';
-    if(!mysqli_query($conn, $sql)) {
+    if(mysqli_num_rows(mysqli_query($conn, $sql)) <= 0) {
       $sql = 'INSERT INTO student VALUES (' . $sid .', "'. $fname .'", "'. $lname .'", "'. $phone .'", "'. $email .'", '. $guest .  ');';
 
       if(mysqli_query($conn, $sql)) {
@@ -52,7 +52,7 @@ if(isset($_POST["fname"]) && isset($_POST["lname"]) && isset($_POST["sid"])) {
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
 
     $sql = 'SELECT guest_id FROM guest WHERE student_id=' . $sid . ' AND f_name="' . $fname . '" AND l_name="' . $lname . '";';
-    if(!mysqli_query($conn, $sql)) {
+    if(mysqli_num_rows(mysqli_query($conn, $sql)) <= 0) {
       //this is the most ramshackle method of getting the id value for guest, but
       //  it also might be the easiest without messing with the AUTO_INCREMENT from
       //  MySQL.
